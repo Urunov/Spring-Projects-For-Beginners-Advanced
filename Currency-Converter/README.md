@@ -1,7 +1,4 @@
-# Java-Projects-For-Beginners-Advanced
-All Projects List: 
-1. Currency - [Converter](https://github.com/Urunov/Java-Projects-For-Beginners-Advanced/tree/master/Currency-Converter/CurrencyCBU)
-
+# [The Main Page](https://github.com/Urunov/Java-Projects-For-Beginners-Advanced)
 ## Currency - Converter 
 
 This project is a very basic project in Java that is used to convert a currency from one to another. A web-based interface for converting currency and getting the output value, for example, here displays converting the currency of the US dollar to INR. 
