@@ -1,4 +1,4 @@
-package uz.mypractice.currencycbui.controller;
+package uz.mypractice.correncycbu.currencycbui.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
