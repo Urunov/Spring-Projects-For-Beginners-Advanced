@@ -1,4 +1,4 @@
-package uz.mypractice.currencycbui.model;
+package uz.mypractice.correncycbu.currencycbui.model;
 
 /**
  * @project: CurrencyCBUI

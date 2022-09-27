@@ -1,4 +1,4 @@
-package uz.mypractice.currencycbui;
+package uz.mypractice.correncycbu.currencycbui;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
