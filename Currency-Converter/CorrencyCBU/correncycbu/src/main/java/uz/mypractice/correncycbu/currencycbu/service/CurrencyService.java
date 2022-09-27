@@ -1,4 +1,4 @@
-package uz.mypractice.correncycbu.currencycbui.service;
+package uz.mypractice.correncycbu.currencycbu.service;
 
 import org.springframework.stereotype.Service;
 

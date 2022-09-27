@@ -1,13 +1,13 @@
-package uz.mypractice.correncycbu.currencycbui;
+package uz.mypractice.correncycbu.currencycbu;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CurrencyCbuiApplication {
+public class CurrencyCbuApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CurrencyCbuiApplication.class, args);
+        SpringApplication.run(CurrencyCbuApplication.class, args);
     }
 
 }
