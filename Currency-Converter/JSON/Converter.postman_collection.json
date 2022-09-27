@@ -1,0 +1,18 @@
+{
+	"info": {
+		"_postman_id": "4e54ebea-be70-4b44-9628-2a8840897c6b",
+		"name": "Converter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9579675"
+	},
+	"item": [
+		{
+			"name": "CBU-Converter",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
