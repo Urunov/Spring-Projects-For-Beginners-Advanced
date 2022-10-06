@@ -1,0 +1,468 @@
+{
+	"info": {
+		"_postman_id": "0b1ae85b-d9b0-4f6b-90f0-d31da601daae",
+		"name": "Spring-University-Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9579675"
+	},
+	"item": [
+		{
+			"name": "STUDENT",
+			"item": [
+				{
+					"name": "GET student info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/student?firstName=Sitora&lastName=DJaynarova",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"student"
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "Sitora"
+								},
+								{
+									"key": "lastName",
+									"value": "DJaynarova"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Student By Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/studentname?firstName=DJaynarova",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"studentname"
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "DJaynarova"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/v1/find/lastname/B11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"v1",
+								"find",
+								"lastname",
+								"B11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/v1/find/student/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"v1",
+								"find",
+								"student",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SAVE Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\" : \"Sitora\",\n    \"lastName\": \"B11\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/v1/save/student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"v1",
+								"save",
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL Student Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/find/student/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"find",
+								"student",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/v1/student/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"1"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/v1/student/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student Values",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\" : \"Oybek\",\n    \"lastName\": \"Abdalov\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/v1/update/student/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"v1",
+								"update",
+								"student",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find By Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/v1/find/name/Oybek",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"v1",
+								"find",
+								"name",
+								"Oybek"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UNIVERSITY",
+			"item": [
+				{
+					"name": "GET University",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/univ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"univ"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "TATU",
+									"disabled": true
+								},
+								{
+									"key": "courseName",
+									"value": "Computer Engineering",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Univer One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/one?id=1&name=TUIT&courseName=IT and Technology",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"one"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "name",
+									"value": "TUIT"
+								},
+								{
+									"key": "courseName",
+									"value": "IT and Technology"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All University",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/university/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"university",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save University",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"tessst7657765\",\n    \"courseName\": \"IT security\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/save/university",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"save",
+								"university"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Univesity By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/university/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"university",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE By ID University",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/university/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"university",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subjects",
+			"item": [
+				{
+					"name": "Save Subject",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
