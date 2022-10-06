@@ -41,7 +41,7 @@ public class StudentController {
 
     @GetMapping("/find/student/all")
     public List<Student> fetchStudentList() throws StudentNotFoundException {
-        LOG.info("Inside the List of  Student of Controller : ");
+        LOG.info("Inside the List of  Student of Controller : {}", studentService.fetchStudentList());
         return studentService.fetchStudentList();
     }
 

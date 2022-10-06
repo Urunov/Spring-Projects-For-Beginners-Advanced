@@ -3,11 +3,11 @@ package uz.edu.be.spring.university.project.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import uz.edu.be.spring.university.project.exception.UniversityNotFoundException;
 import uz.edu.be.spring.university.project.model.University;
 import uz.edu.be.spring.university.project.service.UniversityServiceImpl;
 
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,8 +29,12 @@ public class UniversityController{
     }
 
     @GetMapping("/university/{id}")
-    public Optional<University> getAllUniversityById(@PathVariable Long id){
+    public Optional<University> getAllUniversityById(@PathVariable Long id) throws UniversityNotFoundException {
         return universityServiceImp.getUniversityById(id);
+    }
+    @GetMapping("/university/all")
+    public List<University> getAllUniversity() throws UniversityNotFoundException {
+        return universityServiceImp.listUniversity();
     }
 
     @DeleteMapping("/university/{id}")

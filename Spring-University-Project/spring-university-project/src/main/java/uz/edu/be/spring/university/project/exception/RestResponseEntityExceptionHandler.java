@@ -9,6 +9,9 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 import uz.edu.be.spring.university.project.model.entity.ErrorMessage;
 
+import java.util.Date;
+
+
 /**
  * @project: spring-university-project
  * @Date: 06.10.2022
@@ -19,23 +22,43 @@ import uz.edu.be.spring.university.project.model.entity.ErrorMessage;
 @ResponseStatus
 public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
     //
+    /***
+     * 1. Handle specific Exception.
+     * 2. Handle Global Exception.
+     *
+     * **/
+
+    // Handle Specific Exception.
     @ExceptionHandler(StudentNotFoundException.class)
     public ResponseEntity<ErrorMessage> studentNotFoundException(StudentNotFoundException exception,
                                                                  WebRequest request){
-        ErrorMessage message = new ErrorMessage(HttpStatus.NOT_FOUND, exception.getMessage());
+        ErrorMessage message = new ErrorMessage(HttpStatus.NOT_FOUND, exception.getMessage()); // 1. Error Message for capture error
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message);
 
+    }
+    //Handle specific exception.
+    @ExceptionHandler(UniversityNotFoundException.class)
+    public ResponseEntity<?> universityNotFoundException(UniversityNotFoundException exception,
+                                                                 WebRequest request){
 
-        return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                 .body(message);
+        // 1. Error Message for capture error: Information without date.
+//        ErrorMessage message = new ErrorMessage(HttpStatus.NOT_FOUND, exception.getMessage());
+//        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message);
+
+        // 2. Error Details for capture error.
+        Date messageTime = new Date();
+        ErrorDetails errorDetails = new ErrorDetails(messageTime, exception.getMessage(), request.getDescription(true));
+
+        return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
     }
 
-    @ExceptionHandler(UniversityNotFoundException.class)
-    public ResponseEntity<ErrorMessage> universityNotFoundException(UniversityNotFoundException exception,
-                                                                 WebRequest request){
-        ErrorMessage message = new ErrorMessage(HttpStatus.NOT_FOUND, exception.getMessage());
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<?> handleGlobalException(Exception exception, WebRequest request){
 
 
-        return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body(message);
+        Date messageTime = new Date();
+
+        ErrorDetails errorDetails = new ErrorDetails(messageTime, exception.getMessage(), request); //
+        return new ResponseEntity<>(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
