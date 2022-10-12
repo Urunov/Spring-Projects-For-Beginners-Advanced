@@ -2,7 +2,7 @@ package uz.edu;
 
 import com.google.gson.annotations.SerializedName;
 
-public class MoneyCorrency {
+public class MoneyCurrency {
 
 	@SerializedName("CcyNm_EN")
 	private String ccyNmEN;

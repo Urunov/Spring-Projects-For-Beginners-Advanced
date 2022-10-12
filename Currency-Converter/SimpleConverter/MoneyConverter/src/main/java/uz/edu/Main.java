@@ -26,14 +26,13 @@ public class Main {
 
             InputStreamReader reader = new InputStreamReader(connection.getInputStream());
 
-            MoneyCorrency[] moneyCorrencies = gson.fromJson(reader, MoneyCorrency[].class);
-            MoneyCorrency moneyCorrency1 = new MoneyCorrency();
+            MoneyCurrency[] moneyCurrencies = gson.fromJson(reader, MoneyCurrency[].class);
 
-//            if(moneyCorrency1.getId()==69){
+//            if(moneyCurrency1.getId()==69){
 //                System.out.println(moneyCorrency1.toString());
 //            }
 
-            System.out.println(gson.toJson(moneyCorrencies));
+            System.out.println(gson.toJson(moneyCurrencies));
 
 
         } catch (MalformedURLException ex) {
