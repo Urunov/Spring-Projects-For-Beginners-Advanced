@@ -116,7 +116,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"firstName\" : \"Sitora\",\n    \"lastName\": \"B11\"\n}",
+							"raw": "{\n    \"firstName\" : \"sdf\",\n    \"lastName\": \"B1991\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -167,7 +167,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9090/api/v1/student/1",
+							"raw": "http://localhost:9090/api/v1/student/14",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -177,7 +177,7 @@
 								"api",
 								"v1",
 								"student",
-								"1"
+								"14"
 							],
 							"query": [
 								{
@@ -250,7 +250,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9090/api/v1/find/name/Oybek",
+							"raw": "http://localhost:9090/api/v1/find/name/Nodir",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -261,7 +261,7 @@
 								"v1",
 								"find",
 								"name",
-								"Oybek"
+								"Nodir"
 							]
 						}
 					},
@@ -387,7 +387,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"tessst7657765\",\n    \"courseName\": \"IT security\"\n}",
+							"raw": "{\n    \"name\": \"EDU\",\n    \"courseName\": \"IT security\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"

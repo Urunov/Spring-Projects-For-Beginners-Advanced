@@ -1,4 +1,4 @@
-package uz.edu.be.spring.university.project.exception;
+package uz.edu.travelservice.exception;
 
 /**
  * @project: spring-university-project
