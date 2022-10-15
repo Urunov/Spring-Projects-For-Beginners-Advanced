@@ -12,4 +12,6 @@ import uz.edu.be.spring.university.project.model.Teachers;
  */
 @Repository
 public interface TeachersRepository extends JpaRepository<Teachers, Long> {
+    Teachers findByName(String name);
+
 }

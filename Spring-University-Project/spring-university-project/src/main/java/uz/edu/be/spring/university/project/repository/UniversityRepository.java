@@ -12,4 +12,5 @@ import uz.edu.be.spring.university.project.model.University;
  */
 @Repository
 public interface UniversityRepository extends JpaRepository<University, Long> {
+    University findByName(String name);
 }
