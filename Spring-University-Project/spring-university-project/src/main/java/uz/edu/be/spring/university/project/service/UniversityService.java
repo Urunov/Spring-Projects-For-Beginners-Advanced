@@ -1,6 +1,7 @@
 package uz.edu.be.spring.university.project.service;
 
 import uz.edu.be.spring.university.project.exception.UniversityNotFoundException;
+import uz.edu.be.spring.university.project.model.Student;
 import uz.edu.be.spring.university.project.model.University;
 
 import java.util.List;
@@ -20,4 +21,9 @@ public interface UniversityService {
     Optional<University> getUniversityById(Long id) throws UniversityNotFoundException;
 
     public void deleteUniversityById(Long id);
+
+    University updateUniversityInfo(Long id, University university);
+
+    University fetchUniversityByName(String name) throws UniversityNotFoundException;
+
 }

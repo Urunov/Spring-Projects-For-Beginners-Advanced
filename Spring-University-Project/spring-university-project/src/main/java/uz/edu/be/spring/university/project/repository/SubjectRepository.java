@@ -2,6 +2,7 @@ package uz.edu.be.spring.university.project.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import uz.edu.be.spring.university.project.model.Student;
 import uz.edu.be.spring.university.project.model.Subjects;
 
 /**
@@ -12,4 +13,5 @@ import uz.edu.be.spring.university.project.model.Subjects;
  */
 @Repository
 public interface SubjectRepository extends JpaRepository<Subjects, Long> {
+    Subjects findByName(String Name);
 }
