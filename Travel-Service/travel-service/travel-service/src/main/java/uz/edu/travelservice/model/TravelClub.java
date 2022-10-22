@@ -1,5 +1,6 @@
 package uz.edu.travelservice.model;
 
+import com.sun.istack.NotNull;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 import uz.edu.travelservice.model.genrator.IdGenerator;
@@ -21,7 +22,11 @@ import javax.persistence.*;
 @Entity
 public class TravelClub extends IdGenerator{
     //
-    private String name;
+    @NotNull
+    @Column(name = "name")
+    private String clubName;
+    @Column(name = "introduction")
     private String introduction;
+    @Column(name = "foundation_time")
     private long foundationTime;
 }

@@ -51,6 +51,7 @@ public class PostServiceImpl implements PostService {
         headers.setContentType(MediaType.APPLICATION_JSON);
 
         HttpEntity<PostModel> httpEntity = new HttpEntity<>(postModel, headers);
+
         ResponseEntity<PostModel> newPostingEntity = restTemplate.postForEntity(postBaseApiUrl + "/posts", httpEntity, PostModel.class);
 
         if (newPostingEntity.getStatusCode() == HttpStatus.CREATED) {

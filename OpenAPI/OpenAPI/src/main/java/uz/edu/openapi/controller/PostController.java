@@ -6,8 +6,6 @@ import uz.edu.openapi.model.CommentModel;
 import uz.edu.openapi.model.PostModel;
 import uz.edu.openapi.service.PostService;
 
-import javax.xml.stream.events.Comment;
-
 /**
  * @project: OpenAPI
  * @Date: 14.10.2022
@@ -25,7 +23,6 @@ public class PostController {
         PostModel[] response = postService.getAllPosts();
         return response;
     }
-
     @GetMapping("/posts/{postId}/comments")
     public CommentModel[] getAllPostsByUserId(@PathVariable("postId") Long postId){
 
@@ -49,3 +46,5 @@ public class PostController {
         postService.deletePost(postId);
     }
 }
+
+//https://dog.ceo/dog-api/breeds-list

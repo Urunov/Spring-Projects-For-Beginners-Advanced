@@ -13,7 +13,6 @@ public interface PostService {
     public PostModel[] getAllPosts();
     //void getAllPostsByUserId(Long userId);
     CommentModel[] getAllCommendsForApost(Long postId);
-
     PostModel createPost(PostModel postModel);
     PostModel updatePost(PostModel postModel, Long postId);
     void deletePost(Long postId);

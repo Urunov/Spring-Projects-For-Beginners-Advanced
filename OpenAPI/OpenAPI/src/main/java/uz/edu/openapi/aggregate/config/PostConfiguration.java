@@ -16,8 +16,6 @@ import java.time.Duration;
 @Configuration
 public class PostConfiguration {
     //
-
-
     @Bean
     public RestTemplate restTemplate(RestTemplateBuilder builder){
         return builder

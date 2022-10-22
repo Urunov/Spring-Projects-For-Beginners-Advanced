@@ -12,4 +12,5 @@ import uz.edu.travelservice.model.TravelClub;
  */
 @Repository
 public interface TravelClubRepository extends JpaRepository<TravelClub, Long > {
+    TravelClub findByClubName(String name);
 }

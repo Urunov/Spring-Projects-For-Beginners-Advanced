@@ -4,7 +4,10 @@ import lombok.*;
 import lombok.experimental.SuperBuilder;
 import uz.edu.travelservice.model.genrator.IdGenerator;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 /**
  * Created By hamdamboy
@@ -19,11 +22,13 @@ import javax.persistence.Entity;
 @AllArgsConstructor
 @ToString
 @Entity
-public class Membership extends IdGenerator {
+public class Membership extends IdGenerator{
     //
-    private String membershipId;
+    @Column(name = "role_in_club")
     private RoleInClub roleInClub;
+    @Column(name = "join_date")
     private String joinDate;
+    @Column(name = "travel_club_id")
     private String travelClubId;
 
 }

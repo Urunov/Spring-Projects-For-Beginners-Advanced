@@ -23,12 +23,12 @@ import java.util.Objects;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public abstract class IdGenerator implements Serializable {
+public abstract class IdGenerator implements Serializable { // BaseEntity // Domain Driven Design (DDD)
     //
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id; // String id;
 
     @Override
     public int hashCode() {
