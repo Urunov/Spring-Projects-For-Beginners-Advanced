@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <property name="DEV_HOME" value="./travel-service/logs/test/"/>
+    <property name="APP_NAME" value="travel-project"/>
+
+    <include resource="logback-common.xml"/>
+
+</configuration>
