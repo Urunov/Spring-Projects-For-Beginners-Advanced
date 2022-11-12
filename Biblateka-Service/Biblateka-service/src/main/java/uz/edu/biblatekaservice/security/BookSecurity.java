@@ -14,19 +14,17 @@ public class BookSecurity extends WebSecurityConfigurerAdapter {
     //
     // Annotation
     @Override
-    protected void configure(AuthenticationManagerBuilder auth)
-            throws Exception
-    {
-        auth.inMemoryAuthentication()
-                .passwordEncoder(passwordEncoder())
-                .withUser("gfg")
-                .password(passwordEncoder().encode("pass"))
-                .roles("ADMIN")
-                .and()
-                .passwordEncoder(passwordEncoder())
-                .withUser("user")
-                .password(passwordEncoder().encode("pass"))
-                .roles("BASIC");
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        auth.inMemoryAuthentication()
+//                .passwordEncoder(passwordEncoder())
+//                .withUser("gfg")
+//                .password(passwordEncoder().encode("pass"))
+//                .roles("ADMIN")
+//                .and()
+//                .passwordEncoder(passwordEncoder())
+//                .withUser("user")
+//                .password(passwordEncoder().encode("pass"))
+//                .roles("BASIC");
     }
 
     // Annotation
