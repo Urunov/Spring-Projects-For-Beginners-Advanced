@@ -6,13 +6,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import uz.edu.springtokenjwtmysql.entity.User;
 import uz.edu.springtokenjwtmysql.service.UserService;
-
 import javax.annotation.PostConstruct;
-
 @RestController
 public class UserController {
     //
-
     @Autowired
     private UserService userService;
 
